@@ -2,7 +2,6 @@
 // Первоначальный массив можно ввести с клавиатуры, либо задать на старте выполнения алгоритма. 
 // При решении не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами
 
-string[] stringArray = { "Hello", "Ruslan", "=)", "GB" }; //задал массив строк
 
 void PrintArray(string[] Mas) //функция вывода массива в консоль
 {
@@ -14,7 +13,7 @@ void PrintArray(string[] Mas) //функция вывода массива в к
 
 }
 
-string[] SortedArray(string[] array) //создаем функцию по сортировке массива, согласно требованиям задачи
+string[] SortedArray(string[] array) //создаем функцию по фильтрации массива, согласно требованиям задачи
 {
     string[] source = new string[array.Length]; //создаем новый массив размером, равным длине принимаемого массива функцией
     int i = 0; //задаем счетчик
@@ -28,3 +27,10 @@ string[] SortedArray(string[] array) //создаем функцию по сор
     }
     return source;
 }
+
+string[] stringArray = { "Hello", "Ruslan", "=)", "GB" }; //задал массив строк
+
+Console.WriteLine("Исходный массив");
+PrintArray(stringArray); //выводим исходный массив
+Console.WriteLine("Отсортированный массив");
+PrintArray(SortedArray(stringArray)); // выводим отфильтрованный массив
